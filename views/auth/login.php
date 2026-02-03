@@ -5,7 +5,7 @@
           </div>
      <?php endif; ?>
      
-     <?php if ($user_logged_in): ?>
+     <?php if (isset($_SESSION['user_id'])): ?>
           <div id="dashboard">
                <h1> Hello, <?php echo htmlspecialchars($user_name);?> </h1>
                <form method="GET" action="index.php">
@@ -18,7 +18,7 @@
                <h2>Login</h2>
                <input type="hidden" name="action" value="login">
                <input type="text" name="username" placeholder="Please enter your username here !">
-               <input type="password" name="password" plasceholder="Something secret should be hidden here">
+               <input type="password" name="password" placeholder="Something secret should be hidden here">
                <button type="submit">Login</button>
                <span class="link" onclick="toggleView()">First time here ? Sign up now ! </span>
           </form>
@@ -35,7 +35,7 @@
           <script>
                function toggleView() {
                     document.getElementById('login-form').classList.toggle('hidden');
-                    document.getElementById('register').classList.toggle('hidden');
+                    document.getElementById('register-form').classList.toggle('hidden');
                }
           </script>
      <?php endif; ?>

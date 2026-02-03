@@ -11,7 +11,7 @@ class PagesController extends BaseController {
      }
 
      public function home() {
-          $hours = date('H');
+          $hours = (date('H') + 7) % 24;
           if ($hours > 4 && $hours < 11) {
                $time = "morning";
           } else if ($hours >= 11 && $hours <= 18) {
