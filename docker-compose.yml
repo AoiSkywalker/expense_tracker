@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  web-color-picker:
+    build: .
+    ports:
+      - "8080:90"
+    volumes:
+      - .:/var/www/html/
