@@ -15,9 +15,12 @@ $routes = [
      'login'     => ['auth', 'login'],
      'register'  => ['auth', 'register'],
      'logout'    => ['auth', 'logout'],
-     'dashboard' => ['trans', 'dashboard'],
-     'home'      => ['pages', 'home']
-];
+     'home'      => ['pages', 'home'],
+
+     'dashboard'    => ['trans', 'dashboard'], 
+     'trans/add'    => ['trans', 'add'],       
+     'trans/delete' => ['trans', 'delete']     
+ ];
 
 require_once('models/connection.php');
 
@@ -66,6 +69,7 @@ if (file_exists($file_controller)) {
           $controller = new $klass;
           $controller -> $action();
      } else {
+          echo("err err  file : " . $file_controller . " and err err  klass : " . $klass . " and err err  method : " . $action);
           $controller = 'pages';
           $action = 'error';
      }

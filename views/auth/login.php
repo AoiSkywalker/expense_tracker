@@ -14,30 +14,17 @@
                </form> 
           </div>
      <?php else: ?>
-          <form id="login-form" method="POST" action="index.php">
+          <form id="login-form" method="POST" action="/login">
                <h2>Login</h2>
                <input type="hidden" name="action" value="login">
                <input type="text" name="username" placeholder="Please enter your username here !">
                <input type="password" name="password" placeholder="Something secret should be hidden here">
                <button type="submit">Login</button>
-               <span class="link" onclick="toggleView()">First time here ? Sign up now ! </span>
+               <p class="link">
+                    <a href="/register" style="color: #0ff; text-decoration: none">First time here ? Sign up here</a>
+               </p>
           </form>
      
-          <form id="register-form" method="POST" action="index.php" class="hidden">
-               <h2>Sign up</h2>
-               <input type="hidden" name="action" value="register">
-               <input type="text" name="username" placeholder="New username" required>
-               <input type="password" name="password" placeholder="New password" required>
-               <button type="submit">Sign Up</button>
-               <span class="link" onclick="toggleView()">Back to login</span>
-          </form>
-
-          <script>
-               function toggleView() {
-                    document.getElementById('login-form').classList.toggle('hidden');
-                    document.getElementById('register-form').classList.toggle('hidden');
-               }
-          </script>
      <?php endif; ?>
 </div>
 

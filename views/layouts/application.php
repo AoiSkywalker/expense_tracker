@@ -16,7 +16,7 @@
 
                <div class="nav-links">
                     <?php if (isset($_SESSION['user_id'])): ?>
-                         <a href="/home" class="nav-item">Dashboard</a>
+                         <a href="/dashboard" class="nav-item">Dashboard</a>
                          <a href="/profile" class="nav-item">Profile</a>
                          <a href="/logout" class="nav-item">Logout</a>
                     <?php else: ?>
