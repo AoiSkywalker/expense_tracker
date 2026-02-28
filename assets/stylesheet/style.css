@@ -26,7 +26,7 @@ body {
   margin: 0;
   padding-top: 80px;
   color: var(--text);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {

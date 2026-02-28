@@ -15,11 +15,16 @@ $routes = [
      'login'     => ['auth', 'login'],
      'register'  => ['auth', 'register'],
      'logout'    => ['auth', 'logout'],
-     'home'      => ['pages', 'home'],
+     'profile'   => ['auth', 'profile'],
+     'delete_account' => ['auth', 'delete_account'],
+     'forgot_password' => ['auth', 'forgot_password'],
+     'reset_password' => ['auth', 'reset_password'],
+
+     'home'         => ['pages', 'home'],
 
      'dashboard'    => ['trans', 'dashboard'], 
      'trans/add'    => ['trans', 'add'],       
-     'trans/delete' => ['trans', 'delete']     
+     'trans/delete' => ['trans', 'delete'],
  ];
 
 require_once('models/connection.php');
